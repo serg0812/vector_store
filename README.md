@@ -7,6 +7,8 @@ You will require the following libraries:
 - pickle
 - openai (you dont need it, just in case you want to query LLM with this)
 
+Dont forget to put OPENAI_API_KEY as env var
+
 First step. Load pdf into ./pdf folder
 
 Second step. Run:
