@@ -12,8 +12,6 @@ from langchain.chains import RetrievalQA
 from langchain.llms import OpenAI
 import pickle
 
-#from langchain.document_loaders import TextLoader
-
 pdf_files = os.listdir(pdf_directory)  # list all files in the directory
 
 all_pages = []
@@ -28,26 +26,6 @@ for pdf_file in pdf_files:
 all_pages_flat = [paragraph for page in all_pages for paragraph in page]
 # flattening further to get an array of strings
 all_pages_flat_content = [doc.page_content for doc in all_pages_flat]
-
-# all_pages now contains the pages of all PDFs in the directory
-
-#pdf_directory = "./pdf"
-#all_pages=[]
-# Iterate over each file in the directory
-#for filename in os.listdir(pdf_directory):
-#    if filename.endswith(".pdf"):
-        # Construct the full file path
-#        file_path = os.path.join(pdf_directory, filename)
-
-        # Open the PDF file
-#        with open(file_path, "rb") as file:
-#            loader = PyPDFLoader(file_path)
-#           pages = loader.load_and_split()
-#           all_pages.append(pages)
-
-
-#print(all_pages)
-#print(all_pages[0][10])
 
 from langchain.text_splitter import CharacterTextSplitter
 #split all_pages into as per defined splitter rules
