@@ -59,7 +59,3 @@ vector_store = FAISS.from_documents(docs, OpenAIEmbeddings())
 
 with open("faiss_store.pkl", "wb") as f:
     pickle.dump(vector_store, f)
-
-#search = faiss_index.similarity_search("the history of the fish farming", k=1)
-#for doc in search:
-#    print(str(doc.metadata["page"]) + ":", doc.page_content[:2000])
